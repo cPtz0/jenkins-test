@@ -1,3 +1,7 @@
 #!/bin/sh
-echo "這是來自Github的自動執行腳本"
-echo "當前時間$(date)"
+echo "開始測試"
+pytest test_sample.py
+--html report.html
+--self contained.html
+
+echo "FINISH!! 已產出報告"
