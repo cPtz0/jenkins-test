@@ -11,11 +11,13 @@ pipeline{
       }
     }
     stage('Publish Report'){
-      publishHTML([
-        reportDir: '.',
-        reportFile: 'reportFile.html',
-        reportName: '測試報告'
-      ])
+      steps {
+          publishHTML([
+          reportDir: '.',
+          reportFile: 'reportFile.html',
+          reportName: '測試報告'
+        ])
+      }
     }
   }
   post{
