@@ -12,10 +12,10 @@ pipeline{
     }
     stage('Publish Report'){
       steps {
-          publishHTML([
-          reportDir: '.',
-          reportFile: 'reportFile.html',
-          reportName: '測試報告'
+          publishHTML(target:[
+            reportDir: '.',
+            reportFiles: 'reportFile.html',
+            reportName: '測試報告'
         ])
       }
     }
