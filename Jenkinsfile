@@ -16,7 +16,7 @@ pipeline{
         '''
       }
     }
-    stage('歸檔報告'){
+    stage('Publish Report'){
       echo ('歸檔測試報告')
       publishHTML([
         reportDir: '.',
